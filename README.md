@@ -10,7 +10,7 @@
     - [Create DataBase : 데이터베이스 생성](#DataBase)
 
 5. [결과 : 프로젝트의 결과](#Result)
-5. [기대효과 : 프로젝트를 의의 및 확장성](#Benefit)
+5. [기대효과 : 프로젝트 의의 및 확장성](#Benefit)
 
 
 ## Introduction
