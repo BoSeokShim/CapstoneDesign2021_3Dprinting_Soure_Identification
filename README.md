@@ -47,3 +47,17 @@
 |---|---|---|
 | Hou Jong Uk | Hallym Univ(Prof.) | juhou@hallym.ac.kr
 
+
+## 3D Printer Device & 3D Model
+
+
+## 3D Database : 3B2SP(샘플 데이터셋 이름 <추후 수정>)
+
+
+## EfficientNet Model
+
+
+## Result
+
+
+## Benefit
