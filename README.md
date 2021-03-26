@@ -53,7 +53,7 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 3D 프린터 종류는 다음과 같다.
 
 ### 3D Printer Device
-|Printer|Device|Owner|
+|Device|Num|Owner|
 |---|---|---|
 | Method X | 1 | MMC Lab
 | Replicator | 1 | MMC Lab
