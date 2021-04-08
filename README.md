@@ -66,7 +66,7 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 
 
 ## EfficientNet Model
-
+EfficientNet b3
 
 ## Result
 
