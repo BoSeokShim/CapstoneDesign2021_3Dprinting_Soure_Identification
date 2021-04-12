@@ -63,6 +63,7 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 
 
 ## 3D Database : 3B2SP(샘플 데이터셋 이름 <추후 수정>)
+![3D Database Processing](./images/chart_sample.png)
 
 
 ## EfficientNet Model
