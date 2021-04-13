@@ -26,6 +26,7 @@
 2. 수집한 3D 모델을 디지털화하여 데이터베이스 구축
 3. 3D 프린터 고유의 패턴, 특성을 파악하고 출력된 3D 물체들을 분석
 4. EfficientNet BaseLine 모델 기반 3D 프린팅 출처 식별 딥러닝 모델 설계
+5. (미정) YOLO Algorithm을 활용한 실시간 3D 프린팅 모델 출처(Printer Task) 식별
 
 3차원 모델 스캔 및 프린팅을 통한 데이터베이스 구축과 3D 모델의 출처 식별 기술을 개발함으로써 새로운 3D 콘텐츠 시장의 성장과 안정성의 토대를 마련한다.
 
@@ -61,8 +62,30 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 | Cubicon Single Plus 320C | 4 | MakerSpace
 | FlashForge Finder | 4 | MakerSpace
 
+### Data Model Printing Process
+모델 데이터 선정 기준은 3D 프린터의 보안 이슈와 밀접한 관련성을 토대로 의료 영상, 콘텐츠 저작권, 총기, 개인 정보 보안 등의 크게 4가지 기준으로<br>
+치아(Teeth), 아이언맨(Ironman), 총알(Bullet), 열쇠(Key)를 대표 모델 데이터로 선정하였다.<br>
+4개의 모델을 한 세트로 출력을 진행하였고, 출력 과정에서 품질(Quality)의 차이를 두어
+크게 HQ(High Quality), MQ(Medium Quality), LQ(Low Quality)로 나누었다.
+품질의 분류 기준은 3D 출력 모델의 두께(Shell)와 레이어 높이(Layer Height)로 분류하여 다음과 같이 정리할 수 있다.
+
+#### Model Sample
+![3D Model](./images/device/model_object.jpg)
+
+#### Model Quality
+|Quality|Number of shell|Layer height|
+|---|---|---|
+| HQ | 3 | 0.2mm
+| MQ | 2 | 0.2mm
+| LQ | 2 | 0.3mm
+
+#### Collecting 3D Model Data
+![Total Model](./images/model/IMG_0587.PNG)
+
+
 
 ## 3D Database : 3B2SP(샘플 데이터셋 이름 <추후 수정>)
+
 ![3D Database Processing](./images/chart_sample.png)
 
 
