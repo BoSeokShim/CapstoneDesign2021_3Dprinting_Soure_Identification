@@ -62,12 +62,6 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 | Cubicon Single Plus 320C | 4 | MakerSpace
 | FlashForge Finder | 4 | MakerSpace
 
-### Data Model Printing Process
-모델 데이터 선정 기준은 3D 프린터의 보안 이슈와 밀접한 관련성을 토대로 의료 영상, 콘텐츠 저작권, 총기, 개인 정보 보안 등의 크게 4가지 기준으로
-치아(Teeth), 아이언맨(Ironman), 총알(Bullet), 열쇠(Key)를 대표 모델 데이터로 선정하였다.<br>
-4개의 모델을 한 세트로 출력을 진행하였고, 출력 과정에서 품질(Quality)의 차이를 두어
-크게 HQ(High Quality), MQ(Medium Quality), LQ(Low Quality)로 나누었다.<br>
-품질의 분류 기준은 3D 출력 모델의 두께(Shell)와 레이어 높이(Layer Height)로 분류하여 다음과 같이 정리할 수 있다.
 
 ### Model Sample
 <img src="./images/device/model_object.jpg" width="50%" height="50%">
@@ -83,6 +77,12 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 ### Collecting 3D Model Data
 ![Total Model](./images/model/IMG_0587.jpg)
 
+### Data Model Printing Process
+모델 데이터 선정 기준은 3D 프린터의 보안 이슈와 밀접한 관련성을 토대로 의료 영상, 콘텐츠 저작권, 총기, 개인 정보 보안 등의 크게 4가지 기준으로
+치아(Teeth), 아이언맨(Ironman), 총알(Bullet), 열쇠(Key)를 대표 모델 데이터로 선정하였다.<br>
+4개의 모델을 한 세트로 출력을 진행하였고, 출력 과정에서 품질(Quality)의 차이를 두어
+크게 HQ(High Quality), MQ(Medium Quality), LQ(Low Quality)로 나누었다.<br>
+품질의 분류 기준은 3D 출력 모델의 두께(Shell)와 레이어 높이(Layer Height)로 분류하였다.
 
 
 ## 3D Database : 3B2SP(샘플 데이터셋 이름 <추후 수정>)
