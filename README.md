@@ -70,7 +70,8 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 품질의 분류 기준은 3D 출력 모델의 두께(Shell)와 레이어 높이(Layer Height)로 분류하여 다음과 같이 정리할 수 있다.
 
 ### Model Sample
-![3D Model](./images/device/model_object.jpg){: width="50%" height="50%"}
+<img src="./images/device/model_object.jpg" width="50%" height="50%">
+
 
 ### Model Quality
 |Quality|Number of shell|Layer height|
