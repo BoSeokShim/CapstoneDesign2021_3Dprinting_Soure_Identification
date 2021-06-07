@@ -123,7 +123,7 @@ Convolutional Neural Network (CNN) 기반의 딥러닝 모델을 구축한다.<b
 - Epoch : 50
 - Batch-size : 32
 - Optimizer : Adam (Learning rate : 3e-5)
-- 5 Fold cross validation
+- 4 Fold cross validation
 
 ### Data Transform(Albumentations) List
 - VerticalFlip (p=0.5)
