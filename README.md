@@ -8,6 +8,8 @@
 4. [문제해결 : 프로젝트를 해결과정](#Method)
     - [Print 3D Model : 3D 모델 프린팅 작업](#Printing3DModel)
     - [Create DataBase : 데이터베이스 생성](#DataBase)
+    - [Transfer Learning : 이미지 분류 모델 설계](#Transfer-Learning)
+    - [Live Object Detection : OpenCV 실시간 프린터 출처 식별 기술](#Live-Object-Detection)
 
 5. [결과 : 프로젝트의 결과](#Result)
 5. [기대효과 : 프로젝트 의의 및 확장성](#Benefit)
@@ -90,50 +92,70 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 
 ![3D Database Processing](./images/chart_img.png)
 
-### 데이터셋 분석
+### Analyze Datasets
 
 ![3D Database Analysis](./images/3d_image_table1_final.png)
 <br>
-|Set ID|Printer|Filament| Object | Image |
-|---|---|---|---|---|
-| 1 | Method X | PETG | 12 | 1,004 |
-| 2 | Method X | NYLON | 12 | 965 |
-| 3 | Method X | ABS | 12 | 908 |
-| 4 | Method X | ASA | 12 | 965 |
-| 5 | Replicator+ | PLA | 12 | 1,099 |
-| 6 | Replicator+ | Tough PLA | 16 | 1,326 |
-| 7 | 210F_1 | PLA+ | 12 | 889 |
-| 8 | 210F_2 | PLA+ | 12 | 837 |
-| 9 | 210F_3 | PLA+ | 12 | 792 |
-| 10 | 210F_4 | PLA+ | 12 | 888 |
-| 11 | 320C_1 | PLA+ | 16 | 1,323 |
-| 12 | 320C_2 | PLA+ | 16 | 1,393 |
-| 13 | 320C_3 | PLA+ | 16 | 1,276 |
-| 14 | 320C_4 | PLA+ | 16 | 1,434 |
-| 15 | Finder_1 | PLA+ | 16 | 1,186 |
-| 16 | Finder_2 | PLA+ | 16 | 1,198 |
-| 17 | Finder_3 | PLA+ | 16 | 1,269 |
-| 18 | Finder_4 | PLA+ | 16 | 1,397 |
-| Total | 14 | 7 | 252 | <mark>20,149</mark> |
 
+## Dataset Statistics
+![Statistics](./images/statistics.PNG)
 
 
 ## DeepLearning-Model
 ### 딥러닝 모델 설계 및 학습
 본 프로젝트에서는 이미지 분류 모델을 설계하기 위해 이미지 특징을 추출하여 분류하기 위한 네트워크인
-Convolutional Neural Network (CNN) 기반의 딥러닝 모델을 구축한다.
+Convolutional Neural Network (CNN) 기반의 딥러닝 모델을 구축한다.<br>
 ![CNN](./images/cnn.png)
-### Transfer Learning (전이 학습)을 통한 딥러닝 학습 진행
+### Transfer-Learning 
+### (전이 학습)을 통한 딥러닝 학습 진행
 #### Baseline Reference Model - EfficientNet-B3 <br>
-![Efficient](./images/efficient.png)
+![Efficient](./images/efficient.PNG)
 
 ### Model Architecture
 #### Full Object Image
 ![Full_arc](./images/archi.png)
 #### Closeup Object Image
 ![Full_arc](./images/archi2.png) <br><br><br>
+<hr>
+
+### Method
+- NeuralNet Input Size : 300*300
+- Epoch : 50
+- Batch-size : 32
+- Optimizer : Adam (Learning rate : 3e-5)
+- 5 Fold cross validation
+
+### Data Transform(Albumentations) List
+- VerticalFlip (p=0.5)
+- HorizontalFlip (p=0.5)
+- RandomBrightness (limit=0.2, p=0.75)
+- RandomContrast (limit=0.2, p=0.75)
+- MedianBlur (blur_limit=3, p=0.75)
+- GaussNoise (var_limit=(10.0,50.0), p=0.5)
+
+## Live-Object-Detection
+Python OpenCV 라이브러리와 딥러닝 모델을 결합하여 실시간 3D 물체 출처 식별 기술 구현
+![Live](./images/live.PNG)
 
 ## Result
+본 프로젝트에서 3D 프린터 출처 식별을 위한 3D 모델 데이터베이스를 직접 수집하여 구축한 후, 
+물체의 프린터 구분을 위한 이미지 분류 모델을 설계하여 최적의 성능을 구현하기 위한 다양한 실험을 진행하였다.
+여러 가지 학습 진행을 거쳐 다음과 같은 결과를 얻을 수 있었다.
+
+![Live](./images/result.PNG)
 
 
 ## Benefit
+제안하는 프로젝트는 미래의 3차원 프린팅과 스캐닝 데이터 분석의 토대가 될 데이터베이스를 구축하였다.
+3차원 디지털 모델 재구축은 가상/증강현실, 군사, 의료와 같은 첨단 기술과 밀접한 연관을 갖고 있으며 그 수요가 크게 증가하고 있다.
+<br>
+제안한 데이터베이스를 통한 3차원 스캔 및 프린팅 데이터를 기반으로 한 표면 패턴 분석을 통해, 미래의 다양한 3차원 데이터 학습의 새로운 통찰과
+성능 향상 수단을 얻을 것으로 기대된다.<br><br>
+
+
+본 프로젝트는 딥러닝 모델 구축 과정에서 직접 3D 모델을 수집하고 데이터베이스를 구축했다는 점에서 새로운 시도이고,
+향후 다른 연구자들에 의해 연구 기반이 되어 3D 콘텐츠 시장의 성장과 안정성의 토대를 마련한다.
+<br>
+Python OpenCV 기반으로 구현된 실시간 검출 프로그램을 통한 3D 프린터 출처 식별 기술은 경찰,검찰 기관, 법무 회사 등의 디지털 포렌식 기술이 필요한 
+기관에 기술 활용이 가능하고, 지속적인 연구를 통해 국내외 특허권의 조기 선점과 이를 이용한 보안 플랫폼의 핵심 요소 기술로의 활용이 가능하다.
+
