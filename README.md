@@ -12,7 +12,7 @@
     - [Live Object Detection : OpenCV 실시간 프린터 출처 식별 기술](#Live-Object-Detection)
 
 5. [결과 : 프로젝트의 결과](#Result)
-5. [기대효과 : 프로젝트 의의 및 확장성](#Benefit)
+5. [기대효과 : 프로젝트 의의 및 확장성](#Conclusion)
 
 
 ## Introduction
@@ -145,7 +145,7 @@ Python OpenCV 라이브러리와 딥러닝 모델을 결합하여 실시간 3D �
 ![Live](./images/result.PNG)
 
 
-## Benefit
+## Conclusion
 제안하는 프로젝트는 미래의 3차원 프린팅과 스캐닝 데이터 분석의 토대가 될 데이터베이스를 구축하였다.
 3차원 디지털 모델 재구축은 가상/증강현실, 군사, 의료와 같은 첨단 기술과 밀접한 연관을 갖고 있으며 그 수요가 크게 증가하고 있다.
 <br>
