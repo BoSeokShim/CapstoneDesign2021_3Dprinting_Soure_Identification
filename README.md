@@ -53,6 +53,7 @@
 
 
 ## 3D Printer Device & 3D Model
+#### Printing3DModel
 Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학협력관 메이커 스페이스에서 보유하고 있는 12대의 3D 프린터 장비와 <br>스캔 장비를 통해, 기초적인 모델 데이터를 수집한다.
 3D 프린터 종류는 다음과 같다.
 
@@ -78,6 +79,7 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 | LQ | 2 | 0.3mm
 
 ### Collecting 3D Model Data
+#### Database
 ![Total Model](./images/model/IMG_0587.jpg)
 
 ### Data Model Printing Process
@@ -92,8 +94,6 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 
 ![3D Database Processing](./images/chart_img.png)
 
-### Analyze Datasets
-
 ![3D Database Analysis](./images/3d_image_table1_final.png)
 <br>
 
@@ -106,19 +106,19 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 본 프로젝트에서는 이미지 분류 모델을 설계하기 위해 이미지 특징을 추출하여 분류하기 위한 네트워크인
 Convolutional Neural Network (CNN) 기반의 딥러닝 모델을 구축한다.<br>
 ![CNN](./images/cnn.png)
-### Transfer-Learning 
-### (전이 학습)을 통한 딥러닝 학습 진행
-#### Baseline Reference Model - EfficientNet-B3 <br>
+# Transfer-Learning 
+## (전이 학습)을 통한 딥러닝 학습 진행
+### Baseline Reference Model - EfficientNet-B3 <br>
 ![Efficient](./images/efficient.PNG)
 
-### Model Architecture
-#### Full Object Image
+## Model Architecture
+### Full Object Image
 ![Full_arc](./images/archi.png)
-#### Closeup Object Image
-![Full_arc](./images/archi2.png) <br><br><br>
+### Closeup Object Image
+![Full_arc](./images/archi2.png) <br>
 <hr>
 
-### Method
+## Method
 - NeuralNet Input Size : 300*300
 - Epoch : 50
 - Batch-size : 32
