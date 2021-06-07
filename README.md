@@ -4,7 +4,7 @@
 ## Contents
 1. [소개 : 프로젝트에 대한 기본적 소개 및 목적](#Introduction)
 2. [팀 : 팀원 및 역할](#Team)
-3. [구축 모델 : 프로젝트 해결을 위한 구축모델 정의](#Model)
+3. [구축 모델 : 프로젝트 해결을 위한 구축모델 정의](#DeepLearning-Model)
 4. [문제해결 : 프로젝트를 해결과정](#Method)
     - [Print 3D Model : 3D 모델 프린팅 작업](#Printing3DModel)
     - [Create DataBase : 데이터베이스 생성](#DataBase)
@@ -26,8 +26,9 @@
 2. 수집한 3D 모델을 디지털화하여 데이터베이스 구축
 3. 3D 프린터 고유의 패턴, 특성을 파악하고 출력된 3D 물체들을 분석
 4. EfficientNet BaseLine 모델 기반 3D 프린팅 출처 식별 딥러닝 모델 설계
-5. (미정) YOLO Algorithm을 활용한 실시간 3D 프린팅 모델 출처(Printer Task) 식별
+5. Python OpenCV 라이브러리를 활용한 실시간 3D 프린팅 모델 출처(Printer Task) 식별
 
+<br>
 3차원 모델 스캔 및 프린팅을 통한 데이터베이스 구축과 3D 모델의 출처 식별 기술을 개발함으로써 새로운 3D 콘텐츠 시장의 성장과 안정성의 토대를 마련한다.
 
 
@@ -85,13 +86,52 @@ Hallym MMC Lab에서 보유하고 있는 2대의 3D 프린터 장비와 산학�
 품질의 분류 기준은 3D 출력 모델의 두께(Shell)와 레이어 높이(Layer Height)로 분류하였다.
 
 
-## 3D Database : 3B2SP(샘플 데이터셋 이름 <추후 수정>)
+## 3D Database : 3B2SP(3Bigdata 2ShimShin Park dataset)
 
 ![3D Database Processing](./images/chart_img.png)
 
+### 데이터셋 분석
 
-## EfficientNet Model
-EfficientNet b3
+![3D Database Analysis](./images/3d_image_table1_final.png)
+<br>
+|Set ID|Printer|Filament| Object | Image |
+|---|---|---|---|---|
+| 1 | Method X | PETG | 12 | 1,004 |
+| 2 | Method X | NYLON | 12 | 965 |
+| 3 | Method X | ABS | 12 | 908 |
+| 4 | Method X | ASA | 12 | 965 |
+| 5 | Replicator+ | PLA | 12 | 1,099 |
+| 6 | Replicator+ | Tough PLA | 16 | 1,326 |
+| 7 | 210F_1 | PLA+ | 12 | 889 |
+| 8 | 210F_2 | PLA+ | 12 | 837 |
+| 9 | 210F_3 | PLA+ | 12 | 792 |
+| 10 | 210F_4 | PLA+ | 12 | 888 |
+| 11 | 320C_1 | PLA+ | 16 | 1,323 |
+| 12 | 320C_2 | PLA+ | 16 | 1,393 |
+| 13 | 320C_3 | PLA+ | 16 | 1,276 |
+| 14 | 320C_4 | PLA+ | 16 | 1,434 |
+| 15 | Finder_1 | PLA+ | 16 | 1,186 |
+| 16 | Finder_2 | PLA+ | 16 | 1,198 |
+| 17 | Finder_3 | PLA+ | 16 | 1,269 |
+| 18 | Finder_4 | PLA+ | 16 | 1,397 |
+| Total | 14 | 7 | 252 | <mark>20,149</mark> |
+
+
+
+## DeepLearning-Model
+### 딥러닝 모델 설계 및 학습
+본 프로젝트에서는 이미지 분류 모델을 설계하기 위해 이미지 특징을 추출하여 분류하기 위한 네트워크인
+Convolutional Neural Network (CNN) 기반의 딥러닝 모델을 구축한다.
+![CNN](./images/cnn.png)
+### Transfer Learning (전이 학습)을 통한 딥러닝 학습 진행
+#### Baseline Reference Model - EfficientNet-B3 <br>
+![Efficient](./images/efficient.png)
+
+### Model Architecture
+#### Full Object Image
+![Full_arc](./images/archi.png)
+#### Closeup Object Image
+![Full_arc](./images/archi2.png) <br><br><br>
 
 ## Result
 
